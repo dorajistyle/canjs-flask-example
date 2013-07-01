@@ -1,0 +1,20 @@
+{{#json_object}}
+<ul class="list">
+  {{> '/static/views/feedback.mustache'}}
+    {{List.count}}
+    {{#has_next}}
+    <div class="feedbacks">
+      <div id="more_feedbacks"></div>
+      <div class="more">
+        <div class="more_wrapper center">
+          <button data-page="{{next_page}}" data-tab="{{tab_name}}" class="more_btn btn btn-block btn-warning">{{i18n 'feedback.more'}}
+          </button>
+        </div>
+      </div>
+    </div>
+    {{/has_next}}
+{{/json_object}}
+ {{^json_object}}
+    <li>{{i18n "feedback.nothing"}}</li>
+ {{/json_object}}
+</ul>

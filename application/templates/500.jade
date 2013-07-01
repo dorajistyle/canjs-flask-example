@@ -1,0 +1,8 @@
+| {% extends "base.html.old" %}
+  | {% block content %}
+    .row
+      .span8.offset2
+        .centered
+          h1.fascinate-font Sorry we messed up (500)
+          a.btn-large.btn-success(href='{{ url_for(\'index\') }}') Return to index
+    | {% endblock %}

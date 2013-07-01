@@ -1,0 +1,42 @@
+<form id="feedback_form" action="/feedbacks" data-ajax="false" method="post" class="pt50">
+  <div style="margin: 0; padding: 0; display: inline;">
+    <input name="authenticity_token" type="hidden" value="hkDQdyexevZFRIS0qWUrlFADP7HmcRHmXzKQ9NPRzHM="/>
+  </div>
+  <div class="feedback_description">{{i18n 'feedback.info'}}
+<br/>
+  </div>
+  <div class="email_box pt10">
+    <input id="email" name="email" type="email" value="" placeholder="{{i18n 'feedback.enterEmail'}}" style="font-size: 16px;" class="email span12"/>
+  </div>
+  <div id="pp_buttons_radio" data-toggle="buttons-radio" class="btn-group span12">
+    <button type="button" name="propose_type" value="1" class="btn btn-small active span3">{{i18n 'feedback.type.web'}}
+    </button>
+    <button type="button" name="propose_type" value="2" class="btn btn-small span3">{{i18n 'feedback.type.mobile'}}
+    </button>
+    <button type="button" name="propose_type" value="3" class="btn btn-small span3">{{i18n 'feedback.type.development'}}
+    </button>
+    <button type="button" name="propose_type" value="4" class="btn btn-small span3">{{i18n 'feedback.type.etc'}}
+    </button>
+  </div>
+  <input type="hidden" id="propose_type" name="propose_type" value="1"/>
+  <div style="clear: both;">
+  </div>
+  <div class="content_box pt10">
+    <textarea id="content" name="content" style="height: 200px; font-size: 13px;" placeholder="{{i18n 'feedback.textPlaceholder.web'}}" class="span12"></textarea>
+  </div>
+  <div class="agreement pt10">
+    <table style="border-collapse: collapse;">
+      <tr>
+        <td valign="top">
+          <input id="agreement" type="checkbox" name="agreement" value="true" data-role="none"/>
+        </td>
+        <td valign="top">
+          <label for="agreement">{{i18n 'feedback.agreement'}}
+          </label><br/>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button type="submit" class="btn btn-block save">{{i18n 'feedback.send'}}
+  </button>
+</form>

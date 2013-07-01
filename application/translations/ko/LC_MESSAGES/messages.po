@@ -1,0 +1,7 @@
+# Korean translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+msgid "title"
+msgstr "사용자와 함께하는 제안소"
+

@@ -1,0 +1,38 @@
+{
+  "app": "Application name",
+  "ourService": "Our Service!",
+  "participate": "Participate to improve this service",
+  "destroyed": "Feedback successfully destroyed.",
+  "ajax": {
+      "fail": "Sorry, Server Error."
+  },
+  "vote": {
+      "success": "Success the vote."
+  },
+  "feedback": {
+      "info": "Please let us know what you think, proposal anything.",
+      "enterEmail": "Please enter an email address.",
+      "type": {
+        "all": "All",
+        "web": "Web",
+        "mobile": "Mobile",
+        "development": "Development",
+        "etc": "Etc"
+      },
+      "textPlaceholder": {
+         "web": "Enter text that you want to propse for web.",
+         "mobile": "Enter text that you want to propse for mobile.",
+         "development": "Enter text that you want to propse about your idea.",
+         "etc": "Enter text that your story in our service."
+      },
+      "agreement": "I confirm the terms and conditions, and approve it.",
+      "send": "Send",
+      "nothing": "No feedbacks :(",
+      "more": "Show More..."
+  },
+  "validation": {
+    "email": "Please enter an email address.",
+    "content": "Please enter a content.",
+    "agreement": "Please confirm the terms and conditions."
+  }
+}

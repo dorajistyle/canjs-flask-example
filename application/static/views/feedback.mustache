@@ -1,0 +1,18 @@
+{{#feedbacks}}
+ <li class="item clearfix" data-id="{{id}}" {{data "feedback"}}>
+    <ul class="inner_list">
+      <li id="item_{{id}}" class="vote btn {{#has_voted}}disabled{{/has_voted}}{{^has_voted}}btn-warning{{/has_voted}}">
+        <ul class="inner_list">
+          <li id="counter_{{id}}" class="vote_count">{{vote_count}}
+          </li>
+          <li class="vote_icon icon-hand-up">
+          </li>
+        </ul>
+      </li>
+      <li class="content">
+      <span class="fl">{{content}}</span>
+      <span class="remove icon-remove fr"></span>
+      </li>
+    </ul>
+  </li>
+{{/feedbacks}}

@@ -1,0 +1,7 @@
+Flask==0.9
+Flask-SQLAlchemy==0.16
+Jinja2==2.6
+pyjade==2.0.2
+flask-babel==0.8
+flask-testing==0.4
+blinker==1.2

@@ -1,0 +1,33 @@
+<div id="create"></div>
+<div id="proposal_btn" class="page-header"><a href="#!new_propose" id="new_propose" title="{{i18n "participate"}}">
+    <h1>{{i18n "ourService"}}
+<br/><small>{{i18n "participate"}}</small>
+    </h1></a>
+</div><!--
+<Example>row of columns
+</Example>-->
+<ul id="proposal_tab" class="nav nav-tabs">
+  <li class="active"><a class="all" href="#all">{{i18n 'feedback.type.all'}}</a>
+  </li>
+  <li><a class="web" href="#web">{{i18n 'feedback.type.web'}}</a>
+  </li>
+  <li><a class="mobile" href="#mobile">{{i18n 'feedback.type.mobile'}}</a>
+  </li>
+  <li><a class="dev" href="#dev">{{i18n 'feedback.type.development'}}</a>
+  </li>
+  <li><a class="etc" href="#etc">{{i18n 'feedback.type.etc'}}</a>
+  </li>
+</ul>
+<div id="tabs" class="tab-content">
+  <div id="all" class="tab-pane active">
+    {{> '/static/views/feedbacks.mustache'}}
+  </div>
+  <div id="web" class="tab-pane">
+  </div>
+  <div id="mobile" class="tab-pane">
+  </div>
+  <div id="dev" class="tab-pane">
+  </div>
+  <div id="etc" class="tab-pane">
+  </div>
+</div>

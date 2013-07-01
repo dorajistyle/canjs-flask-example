@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#message_wrapper {
+    top: 60px;
+    left: 50%;
+    text-align: center;
+    position: fixed;
+    z-index: 4444;
+
+}
+.navbar .brand {
+    float: none;
+    text-align: center;
+    font-size: medium;
+}
+
+#proposal_btn{
+    background-color: #FE8315;
+    border: 2px solid #132537;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.list {
+    list-style: none;
+    margin: -10px 0 10px 0;
+}
+ul.inner_list {
+    list-style: none;
+    margin: 0;
+}
+
+li.vote {
+  font-size: 11px;
+  color: #38283E;
+  font-weight: bold;
+  float: left;
+  width: 30px;
+  height: 49px;
+  padding-top: 5px;
+  cursor: pointer;
+  padding-bottom: 12px;
+  border: 1px solid #000000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+li.vote_count {
+  padding-top:5px;
+  font-size: 11px;
+  color: #38283E;
+  font-weight: bold;
+  text-align: center;
+}
+
+li.content {
+  padding: 0 0 0 60px;
+  margin-bottom: 20px;
+  font: 13px dotum;
+  /*cursor: pointer;*/
+  margin-left: 24px;
+  padding-top: 5px;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  white-space: pre-line;
+  white-space: -pre-line;
+  white-space: -o-pre-line;
+  white-space: -moz-pre-line;
+  white-space: -hp-pre-line;
+}
+
+li.item {
+  padding: 10px 10px 0 24px;
+  border-bottom: 1px solid #DCDCDC;
+  -webkit-box-shadow: 0 1px 0 #FFFFFe;
+  min-height: 80px;
+}
+
+
+
+.page-header > a,
+.page-header > a:hover,
+.page-header > a:active{
+    text-decoration: none;
+}
+
+.page-header > a > h1{
+    color: #132537;
+}
+.page-header > a:hover > h1,
+.page-header > a:active > h1{
+    color: #FA3113;
+}
+
+.page-header > a > h1 > small{
+    color: #006C80;
+}
+.page-header > a:hover > h1 > small,
+.page-header > a:active > h1 > small{
+    color: #EBCAB8;
+}
+
+.pt50 {
+    padding-top: 50px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
