@@ -1,7 +1,7 @@
 # Canjs-Flask-Example
 
-## [Canjs-Flask-Example](https://github.com/dorajistyle/canjs-flask-example)
-(Multilingual Proposal Center)
+## [Canjs-Flask-Example (Multilingual Proposal Center)](https://github.com/dorajistyle/canjs-flask-example)
+
 
 It's a simple Multilingual Proposal Center example for developer who interested in Canjs, Python Flask, Flask-SQLAlchemy and Jade.
 
