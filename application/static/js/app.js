@@ -35,7 +35,7 @@ require.config({
  * @requires can/view/mustache
  * @requires bootstrap
  */
-require(['jquery', 'utils', 'i18n','can', 'app/feedbacks', 'bootstrap', 'can/view/mustache'],
+require(['jquery', 'utils', 'i18n','can', 'app/feedbacks', 'can/view/mustache'],
 	function ($, utils, i18n, can, Feedbacks) {
 		'use strict';
         var lang =utils.getParam('lang');
