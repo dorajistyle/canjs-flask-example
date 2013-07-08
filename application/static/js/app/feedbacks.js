@@ -1,5 +1,5 @@
 
-define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','bootstrap'], function (can,Fixture,Feedback,utils,i18n,$) {
+define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery'], function (can,Fixture,Feedback,utils,i18n,$) {
 	'use strict';
     var exports = {};
 //    var FEEDBACKS = [
@@ -70,13 +70,12 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
     */
     var Feedbacks = can.Control({
 
-
       init: function(){
-        this.show();
+          utils.log_info("#feedbacks router","initialize")
       },
-      show: function(){
+      show: function(json_object){
         this.element.html(can.view('/static/views/list.mustache', {
-          json_object: this.options.json_object
+          json_object: json_object
         }));
       },
       /**
@@ -102,6 +101,7 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
           });
       }
     });
+    var feedbacks = new Feedbacks("#proposal-app");
     exports.feedbacks = Feedbacks;
 
          /**
@@ -115,8 +115,8 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
     var Create = can.Control({
 
 
-       init: function(){
-          utils.log_debug("element ",this.element);
+       init: function(el){
+          utils.log_debug("create",el);
        },
        show: function(){
            this.feedback = new Feedback();
@@ -186,6 +186,7 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
           }
        }
     });
+    var create = new Create('#proposal-app');
     exports.create = Create;
       /**
       * Control for feedback list tab
@@ -199,9 +200,12 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
         defaults: {}
     },{
        init: function() {
-         utils.log_info("proposal_tab","Tab initialized");
+         utils.log_info("#proposal_tab","Tab initialized");
+         $('#proposal_tab').tab();
+         this.refresh();
+       },
+       refresh: function() {
          var $proposal_tab = $('#proposal_tab');
-         $proposal_tab.tab();
          $($proposal_tab.find('li:first')).removeClass("active");
          $($proposal_tab.find('a:first')).click();
        },
@@ -273,7 +277,6 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
           ev.preventDefault();
           ev.stopPropagation();
           utils.log_info("proposal_tab",$(ev.target).attr('href'));
-          ev.preventDefault();
           var tab,$tab;
           tab = $(ev.target).attr('href');
           var is_active_tab = $(ev.target.parentNode).hasClass("active");
@@ -291,6 +294,7 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
           }
       }
     });
+    var tab = new Tab("#proposal-app");
     exports.tab = Tab;
     /**
       * Router for feedbacks.
@@ -300,6 +304,7 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
       * @name feedback#Router
      * @constructor
     */
+
     var Router = can.Control({
         defaults: {}
       }, {
@@ -309,17 +314,16 @@ define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','
         "route" : function(){
             console.log("home");
             can.when(Feedback.findAll()).then(function(json_object){
-                  new Feedbacks('#proposal-app', {
-                    json_object: json_object
-                  });
-                  new Tab('#proposal-app', {
-                  });
+                  feedbacks.show(json_object);
+                  tab.refresh();
               }
             );
         },
         'new_propose route': function() {
-            new Create('#proposal-app').show();
-            utils.log_debug('new_propose:',"true");
+            can.when(Autentication.findAll()).then(function(json_object){
+               utils.log_debug("auth",JSON.stringify(json_object));
+                    create.show();
+            });
         }
     });
 
