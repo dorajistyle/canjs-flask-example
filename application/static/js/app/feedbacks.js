@@ -1,5 +1,4 @@
-
-define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery'], function (can,Fixture,Feedback,utils,i18n,$) {
+define(['can','can/util/fixture','app/models/feedback','utils','i18n','jquery','bootstrap'], function (can,Fixture,Feedback,utils,i18n,$) {
 	'use strict';
     var exports = {};
 //    var FEEDBACKS = [
